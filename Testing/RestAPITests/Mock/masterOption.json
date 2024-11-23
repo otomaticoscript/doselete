@@ -1,0 +1,44 @@
+[
+    {
+        "IdMaster": 0,
+        "Key": "Monday",
+        "Value": "Monday",
+        "place": 2
+    },
+    {
+        "IdMaster": 0,
+        "Key": "Tuesday",
+        "Value": "Tuesday",
+        "place": 3
+    },
+    {
+        "IdMaster": 0,
+        "Key": "Wednesday",
+        "Value": "Wednesday",
+        "place": 4
+    },
+    {
+        "IdMaster": 0,
+        "Key": "Thursday",
+        "Value": "Thursday",
+        "place": 5
+    },
+    {
+        "IdMaster": 0,
+        "Key": "Friday",
+        "Value": "Friday",
+        "place": 6
+    },
+    {
+        "IdMaster": 0,
+        "Key": "Saturday",
+        "Value": "Saturday",
+        "place": 7
+    },
+    {
+        "IdMaster": 0,
+        "Key": "Sunday",
+        "Value": "Sunday",
+        "place": 1
+    }
+]

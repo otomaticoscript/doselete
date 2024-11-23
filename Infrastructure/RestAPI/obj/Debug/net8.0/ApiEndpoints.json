@@ -1,0 +1,626 @@
+[
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.MasterController",
+    "Method": "GetMasters",
+    "RelativePath": "api/Master",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.MasterController",
+    "Method": "SetMaster",
+    "RelativePath": "api/Master",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "master",
+        "Type": "Doselete.Domain.Entity.Master",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.MasterController",
+    "Method": "SetMaster",
+    "RelativePath": "api/Master",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "master",
+        "Type": "Doselete.Domain.Entity.Master",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.MasterController",
+    "Method": "RemoveMaster",
+    "RelativePath": "api/Master/{idMaster}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idMaster",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.MasterController",
+    "Method": "GetMastersbyLikeName",
+    "RelativePath": "api/Master/find/{findName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "findName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.MasterController",
+    "Method": "SetOptions",
+    "RelativePath": "api/Master/option",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "Doselete.Domain.Entity.MasterOption[]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.MasterController",
+    "Method": "SetOptions",
+    "RelativePath": "api/Master/option",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "Doselete.Domain.Entity.MasterOption[]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.MasterController",
+    "Method": "GetOptions",
+    "RelativePath": "api/Master/option/{idMaster}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idMaster",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.MasterController",
+    "Method": "RemoveOptions",
+    "RelativePath": "api/Master/option/{idOption}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idOption",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.NodeController",
+    "Method": "SetNode",
+    "RelativePath": "api/Node",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "node",
+        "Type": "Doselete.Domain.Entity.NodeList",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.NodeController",
+    "Method": "SetNode",
+    "RelativePath": "api/Node",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "node",
+        "Type": "Doselete.Domain.Entity.NodeList",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.NodeController",
+    "Method": "RemoveNode",
+    "RelativePath": "api/Node/{IdNode}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdNode",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.NodeController",
+    "Method": "GetNodeRoot",
+    "RelativePath": "api/Node/root",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.NodeController",
+    "Method": "SetNodeRoot",
+    "RelativePath": "api/Node/root",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "node",
+        "Type": "Doselete.Domain.Entity.Node",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.NodeController",
+    "Method": "SetNodeRoot",
+    "RelativePath": "api/Node/root",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "node",
+        "Type": "Doselete.Domain.Entity.Node",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.NodeController",
+    "Method": "RemoveNodeRoot",
+    "RelativePath": "api/Node/root/{IdNode}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdNode",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.NodeController",
+    "Method": "GetNodesTree",
+    "RelativePath": "api/Node/tree/{IdNode}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdNode",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.ProductController",
+    "Method": "GetProductCache",
+    "RelativePath": "api/Product/{idProduct}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idProduct",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.ProductController",
+    "Method": "SetProductCache",
+    "RelativePath": "api/Product/job/{idProduct}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idProduct",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.TemplateController",
+    "Method": "GetTemplates",
+    "RelativePath": "api/Template",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.TemplateController",
+    "Method": "SetTemplate",
+    "RelativePath": "api/Template",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "template",
+        "Type": "Doselete.Domain.Entity.Template",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.TemplateController",
+    "Method": "SetTemplate",
+    "RelativePath": "api/Template",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "template",
+        "Type": "Doselete.Domain.Entity.Template",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.TemplateController",
+    "Method": "RemoveTemplate",
+    "RelativePath": "api/Template/{idTemplate}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idTemplate",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.TemplateController",
+    "Method": "SetChildrens",
+    "RelativePath": "api/Template/children",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "childrens",
+        "Type": "Doselete.Domain.Entity.TemplateAllowedChildren[]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.TemplateController",
+    "Method": "SetChildrens",
+    "RelativePath": "api/Template/children",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "childrens",
+        "Type": "Doselete.Domain.Entity.TemplateAllowedChildren[]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.TemplateController",
+    "Method": "RemoveChildren",
+    "RelativePath": "api/Template/children/{idAllowed}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idAllowed",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.TemplateController",
+    "Method": "GetChildrens",
+    "RelativePath": "api/Template/children/{idTemplate}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idTemplate",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.TemplateController",
+    "Method": "GetChildrenByIdNode",
+    "RelativePath": "api/Template/children/node/{idNode}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idNode",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.TemplateController",
+    "Method": "SetFields",
+    "RelativePath": "api/Template/field",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fields",
+        "Type": "Doselete.Domain.Entity.TemplateField[]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.TemplateController",
+    "Method": "SetFields",
+    "RelativePath": "api/Template/field",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fields",
+        "Type": "Doselete.Domain.Entity.TemplateField[]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.TemplateController",
+    "Method": "RemoveField",
+    "RelativePath": "api/Template/field/{idField}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idField",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.TemplateController",
+    "Method": "GetFields",
+    "RelativePath": "api/Template/field/{idTemplate}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idTemplate",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Doselete.Infrastructure.RestAPI.Controllers.TemplateController",
+    "Method": "GetTemplatesbyLikeName",
+    "RelativePath": "api/Template/find/{findName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "findName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
