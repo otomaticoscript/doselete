@@ -16,21 +16,19 @@
 
 
 -- Volcando estructura de base de datos para doselete
-DROP DATABASE IF EXISTS `doselete`;
 CREATE DATABASE IF NOT EXISTS `doselete` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
 USE `doselete`;
 
 -- Volcando estructura para tabla doselete.master
-DROP TABLE IF EXISTS `master`;
 CREATE TABLE IF NOT EXISTS `master` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `Name` varchar(255) DEFAULT NULL COMMENT 'Almacena los combo de tipo seleccion',
   `Create` timestamp NOT NULL DEFAULT current_timestamp(),
   `Modify` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Volcando datos para la tabla doselete.master: ~9 rows (aproximadamente)
+-- Volcando datos para la tabla doselete.master: ~8 rows (aproximadamente)
 REPLACE INTO `master` (`Id`, `Name`, `Create`, `Modify`) VALUES
 	(1, 'Show Genre', '2024-10-05 16:39:26', '2024-10-06 11:50:50'),
 	(2, 'days', '2024-10-05 16:39:43', '2024-10-04 22:00:00'),
@@ -42,7 +40,6 @@ REPLACE INTO `master` (`Id`, `Name`, `Create`, `Modify`) VALUES
 	(8, 'Language', '2024-10-06 12:12:00', '2024-10-06 12:12:50');
 
 -- Volcando estructura para tabla doselete.master_option
-DROP TABLE IF EXISTS `master_option`;
 CREATE TABLE IF NOT EXISTS `master_option` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `IdMaster` int(11) NOT NULL,
@@ -291,21 +288,20 @@ REPLACE INTO `master_option` (`Id`, `IdMaster`, `Key`, `Value`, `Place`) VALUES
 	(235, 4, 'Panel Show', 'Panel Show', 11);
 
 -- Volcando estructura para tabla doselete.node
-DROP TABLE IF EXISTS `node`;
 CREATE TABLE IF NOT EXISTS `node` (
   `Id` bigint(20) NOT NULL AUTO_INCREMENT,
   `IdTemplate` int(11) DEFAULT NULL,
   `Name` varchar(255) DEFAULT NULL,
-  `JsonValue` varchar(255) DEFAULT NULL,
+  `JsonValue` varchar(4000) DEFAULT NULL,
   `Modify` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   PRIMARY KEY (`Id`),
   KEY `nodo_plantilla` (`IdTemplate`),
   CONSTRAINT `nodo_plantilla` FOREIGN KEY (`IdTemplate`) REFERENCES `template` (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='Almacena los nodos de mi arbol que es el producto';
+) ENGINE=InnoDB AUTO_INCREMENT=81 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='Almacena los nodos de mi arbol que es el producto';
 
+-- Volcando datos para la tabla doselete.node: ~0 rows (aproximadamente)
 
 -- Volcando estructura para tabla doselete.node_relation
-DROP TABLE IF EXISTS `node_relation`;
 CREATE TABLE IF NOT EXISTS `node_relation` (
   `Id` bigint(20) NOT NULL AUTO_INCREMENT,
   `IdNode` bigint(20) NOT NULL COMMENT 'Nodo Hijo',
@@ -319,11 +315,11 @@ CREATE TABLE IF NOT EXISTS `node_relation` (
   CONSTRAINT `Children` FOREIGN KEY (`IdNode`) REFERENCES `node` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `ParenteNode` FOREIGN KEY (`IdNodeParent`) REFERENCES `node` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `RootNode` FOREIGN KEY (`IdNodeRoot`) REFERENCES `node` (`Id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='Establece relacion entre nodo';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='Establece relacion entre nodo';
 
+-- Volcando datos para la tabla doselete.node_relation: ~0 rows (aproximadamente)
 
 -- Volcando estructura para tabla doselete.template
-DROP TABLE IF EXISTS `template`;
 CREATE TABLE IF NOT EXISTS `template` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `Name` varchar(255) DEFAULT NULL COMMENT 'Nombre de la Plantilla',
@@ -348,7 +344,6 @@ REPLACE INTO `template` (`Id`, `Name`, `AttributeName`, `Create`, `Modify`) VALU
 	(11, 'TvMaze', '', '2024-10-05 21:59:00', '2024-10-15 08:09:47');
 
 -- Volcando estructura para tabla doselete.template_allowed_children
-DROP TABLE IF EXISTS `template_allowed_children`;
 CREATE TABLE IF NOT EXISTS `template_allowed_children` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `IdTemplate` int(11) NOT NULL,
@@ -375,7 +370,6 @@ REPLACE INTO `template_allowed_children` (`Id`, `IdTemplate`, `IdTemplateParent`
 	(10, 1, 5, 1);
 
 -- Volcando estructura para tabla doselete.template_field
-DROP TABLE IF EXISTS `template_field`;
 CREATE TABLE IF NOT EXISTS `template_field` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `IdTemplate` int(11) NOT NULL,
@@ -427,12 +421,11 @@ REPLACE INTO `template_field` (`Id`, `IdTemplate`, `IdType`, `IdMaster`, `Name`,
 	(30, 11, 3, NULL, 'WEB Channel', 'webChannel', NULL, 0, 12),
 	(31, 11, 4, 7, 'DVDCountry', 'dvdCountry', NULL, 0, 14),
 	(32, 11, 3, NULL, 'Summary', 'summary', NULL, 0, 15),
-	(33, 11, 2, NULL, 'Modify Date', 'update', NULL, 1, 16),
+	(33, 11, 2, NULL, 'Modify Date', 'updated', '-1', 1, 16),
 	(34, 11, 5, 2, 'Show Gener', 'genres', NULL, 0, 5),
 	(35, 8, 5, 4, 'days', 'days', NULL, 0, 2);
 
 -- Volcando estructura para tabla doselete.tvmaze
-DROP TABLE IF EXISTS `tvmaze`;
 CREATE TABLE IF NOT EXISTS `tvmaze` (
   `IdRoot` int(11) NOT NULL DEFAULT 0,
   `Id` int(11) DEFAULT NULL,
@@ -446,8 +439,9 @@ CREATE TABLE IF NOT EXISTS `tvmaze` (
   PRIMARY KEY (`IdRoot`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- Volcando datos para la tabla doselete.tvmaze: ~0 rows (aproximadamente)
+
 -- Volcando estructura para tabla doselete.type_field
-DROP TABLE IF EXISTS `type_field`;
 CREATE TABLE IF NOT EXISTS `type_field` (
   `Id` int(11) NOT NULL AUTO_INCREMENT,
   `Field` varchar(20) DEFAULT NULL,
