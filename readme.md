@@ -5,7 +5,7 @@
 Utilizando una version refactorizada de **Agora** para modelar un caso de prueba tecnica.
 A esta version la llamé Doselete (*voladizo que a manera de dosel se coloca sobre las estatuas, puertas, etc.*)
 
-<img src="[front-image]"/>
+<img src="readme/canopy.png"/>
 ![Logo][front-image]
 
 </div>
@@ -88,7 +88,7 @@ La aplicacion esta pensada para funcionar en consola ya sea window, wsl o docker
 
 ## 📸 Capturas de Pantalla
 
-<img src="[screenshot]"/>
+<img src="readme/screenshot.png"/>
 
 ![Pantalla 1][screenshot]
 ---
