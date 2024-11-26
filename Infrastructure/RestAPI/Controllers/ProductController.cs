@@ -1,8 +1,7 @@
-using System.Text;
 using Doselete.Application.UserCase;
 using Doselete.Application.UserCase.Mapper;
-using Doselete.Domain.Entity;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace Doselete.Infrastructure.RestAPI.Controllers
 {
@@ -19,52 +18,28 @@ namespace Doselete.Infrastructure.RestAPI.Controllers
             _templateManager = templateManager;
 
         }
-        //[ApiKey]
+
         [HttpGet("{idProduct}")]
         public async Task<IActionResult> GetProductCache(int idProduct)
         {
             var nodes = await _productManager.GetProductListNode(idProduct);
             var result = NodeMapper.MapperTree(nodes);
             var builder = await NodeMapper.MapperJsonByTree(result, _templateManager);           
-            return Ok(builder.ToString());
-
+            return Ok(FormatJson(builder.ToString()));
         }
 
-        private StringBuilder Recursive(Tree<NodeList> result)
-        {
-            var builder = new StringBuilder();
-
-            if (result.element.JsonName != "")
-            {
-                builder.Append("{\"" + result.element.JsonName + "\":");
-            }
-            if (result.element.JsonValue != "")
-            {
-                builder.Append(result.element.JsonValue.Replace("}", ""));
-            }
-            else
-            {
-                builder.Append("{");
-            }
-            foreach (var node in result.children)
-            {
-                builder.Append(Recursive(node));
-
-            }
-            builder.Append("}");
-
-            return builder;
-        }
-
-        //[ApiKey]
-        [HttpGet("job/{idProduct}")]
+        [HttpPut("{idProduct}")]
         public async Task<IActionResult> SetProductCache(int idProduct)
         {
             await _productManager.SetCacheFromApiService(idProduct);
             bool ok = true;
             return new JsonResult(new { ok });
-
         }
 
+        private static string FormatJson(string json)
+        {
+            dynamic parsedJson = JsonConvert.DeserializeObject(json);
+            return JsonConvert.SerializeObject(parsedJson, Formatting.Indented);
+        }
     }
 }
